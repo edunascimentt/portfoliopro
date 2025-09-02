@@ -24,6 +24,48 @@ body {
     background-color: #05080F;
 }
 
+.background {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100svh;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.background__blurs {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100svh;
+}
+
+.background__blurs__circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(150px);
+    opacity: 0.7;
+}
+
+.background__blurs__circle--1 {
+    width: 3000px;
+    height: 3000px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 65, 128, 0.75) 0%, rgba(0, 0, 0, 0.00) 100%);
+    top: -2000px;
+    left: -1500px;
+}
+
+.background__blurs__circle--2 {
+    width: 3000px;
+    height: 3000px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(46, 0, 184, 0.75) 0%, rgba(0, 0, 0, 0.00) 100%);
+    bottom: -2000px;
+    right: -1500px;
+}
+
 .logo {
     display: flex;
     flex-direction: column;
@@ -31,7 +73,7 @@ body {
     justify-content: center;
     margin: 0 0 4px 0;
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.0;
 }
 
 .logo__title {
